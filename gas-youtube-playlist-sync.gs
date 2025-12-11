@@ -4,16 +4,16 @@
 
 const PLAYLIST_CONFIG = {
   // 1. Google Sheet 設定
-  sheetName: '工作表名稱',                               // [必填] 工作表名稱
-  videoIdColumnIndex: 2,                          // [必填] 影片網址/ID 所在的欄位索引 (1=A, 2=B, ...)
-  statusColumnIndex: 8,                           // [必填] 狀態標記欄位索引 (例如 H 欄為 8)
+  sheetName: '工作表名稱',           // 您的工作表名稱 (例如: '工作表1')
+  videoIdColumnIndex: 2,            // 影片連結在哪一欄 (A=1, B=2, ...)
+  statusColumnIndex: 8,             // 狀態標記要填在哪一欄 (H=8)
   
   // 2. YouTube API 設定
-  playlistId: '你的youtube撥放清單ID(AAAA)',       // [必填] 您的 YouTube 播放清單 ID(例如:https://www.youtube.com/playlist?list=AAAA)
-  DAILY_CAP: 50,                                  // 每日新增上限 (限制 insert 操作次數，以節省配額)
+  playlistId: '您的播放清單ID',      // YouTube 播放清單 ID (從網址中 list= 後面的字串)
+  DAILY_CAP: 50,                    // 每日新增上限
   
   // 3. 狀態標記文字
-  STATUS_MARK: '✅ 已新增'                        // 成功新增或已存在時，寫入狀態欄位的文字
+  STATUS_MARK: '✅ 已新增'          // 完成後要顯示的文字
 };
 
 // =================================================================
